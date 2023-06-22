@@ -18,6 +18,6 @@ form.addEventListener("submit", (event) => {
     console.error(criticalError);
     htmlBody.innerText = criticalError;
   } else {
-    result.innerText = Math.floor(dividend / divider);
+    result.innerText = Math.round(dividend / divider);
   }
 });
