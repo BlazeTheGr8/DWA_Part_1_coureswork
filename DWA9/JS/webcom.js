@@ -252,7 +252,7 @@ export class Component extends HTMLElement {
         shadow.querySelector("[data-list-blur]").src = dataObje.image
         shadow.querySelector("[data-list-title]").innerText = dataObje.previewTitle
         shadow.querySelector("[data-list-subtitle]").innerText = dataObje.previewSubtitle
-        this.description = shadow.querySelector("[data-list-description]").innerText = dataObje.previewDescription
+        shadow.querySelector("[data-list-description]").innerText = dataObje.previewDescription
         
     }
 }
@@ -280,13 +280,13 @@ export const singleBookPreview = (event) => {
           target.parentNode.parentNode.getAttribute("data-preview") === book.id ||
           target.parentNode.getAttribute("data-preview") === book.id
         ) {
-        //   selectors.bookPreviewImage.src = book.image;
-        //   selectors.bookPreviewBlur.src = book.image;
-        //   selectors.bookPreviewTitle.textContent = book.title;
-        //   selectors.bookPreviewSubtitle.textContent = `${
-        //     authors[book.author]
-        //   } (${new Date(book.published).getFullYear()})`;
-        //   selectors.bookPreviewDescription.textContent = book.description;
+          selectors.bookPreviewImage.src = book.image;
+          selectors.bookPreviewBlur.src = book.image;
+          selectors.bookPreviewTitle.textContent = book.title;
+          selectors.bookPreviewSubtitle.textContent = `${
+            authors[book.author]
+          } (${new Date(book.published).getFullYear()})`;
+          selectors.bookPreviewDescription.textContent = book.description;
 
           dataObje.image = book.image;
           dataObje.previewTitle = book.title
