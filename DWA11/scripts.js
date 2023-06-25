@@ -60,7 +60,6 @@ function tallyReducer(state = 0, action) {
   console.log('');
   
   // Scenario: Resetting the Tally Counter
-  console.log('Scenario 4:');
 
   store.dispatch({ type: 'RESET' });
   console.log('Current state:', store.getState()); // Output: 0
